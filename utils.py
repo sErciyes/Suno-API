@@ -12,8 +12,8 @@ BASE_URL = os.getenv("BASE_URL")
 COMMON_HEADERS = {
     "Content-Type": "text/plain;charset=UTF-8",
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
-    "Referer": "https://app.suno.ai/",
-    "Origin": "https://app.suno.ai",
+    "Referer": "https://suno.com",
+    "Origin": "https://suno.com",
 }
 
 
@@ -61,3 +61,15 @@ async def get_lyrics(lid, token):
     headers = {"Authorization": f"Bearer {token}"}
     api_url = f"{BASE_URL}/api/generate/lyrics/{lid}"
     return await fetch(api_url, headers, method="GET")
+
+
+async def get_credits(token):
+    headers = {"Authorization": f"Bearer {token}"}
+    api_url = f"{BASE_URL}/api/billing/info/"
+    respose = await fetch(api_url, headers, method="GET")
+    return {
+        "credits_left": respose['total_credits_left'],
+        "period": respose['period'],
+        "monthly_limit": respose['monthly_limit'],
+        "monthly_usage": respose['monthly_usage']
+    }

@@ -1,9 +1,13 @@
 [简体中文](README_ZH.md) | [日本語](README_JA.md)
 
+### Good news
 
-# Unofficial Suno API
+I provide the Suno AI API, no deployment is required, no subscription to suno is required. Lower price, more convenient to use the suno API.
+Website: [http://app.sunoaiapi.com](https://app.sunoaiapi.com)
 
-This is an unofficial Suno API based on Python and FastAPI. It currently supports generating songs, lyrics, etc.  
+### Unofficial API
+
+This is an unofficial API based on Python and FastAPI. It currently supports generating songs, lyrics, etc.  
 It comes with a built-in token maintenance and keep-alive feature, so you don't have to worry about the token expiring.
 
 ### Features
@@ -12,6 +16,12 @@ It comes with a built-in token maintenance and keep-alive feature, so you don't 
 - Fully asynchronous, fast, suitable for later expansion
 - Simple code, easy to maintain, convenient for secondary development
 
+
+### Contact me
+
+[https://t.me/austin2035](https://t.me/austin2035)
+
+![group](./images/WechatIMG148.jpg)
 
 ### Usage
 
@@ -49,8 +59,7 @@ After setting up the service, visit /docs
 
 ![docs](./images/docs.png)
 
+### Useful resources
 
-#### Contact me
+[chatgpt web, midjourney, gpts,tts, whisper,suno-v3](https://github.com/Dooy/chatgpt-web-midjourney-proxy)
 
-
-<img src="./images/wechat.jpg" width="382px" height="511px" />
